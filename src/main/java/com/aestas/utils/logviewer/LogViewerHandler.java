@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * @author luciano - luciano@aestasit.com
  */
-public class LogViewerHandler extends TailerListenerAdapter implements AtmosphereHandler<HttpServletRequest, HttpServletResponse> {
+public class LogViewerHandler extends TailerListenerAdapter implements AtmosphereHandler {
 
     private final static String FILE_TO_WATCH = "/opt/tomcat/current-version/logs/";
     //private final static String FILE_TO_WATCH = "d://temp";
@@ -45,7 +45,7 @@ public class LogViewerHandler extends TailerListenerAdapter implements Atmospher
     }
 
     @Override
-    public void onRequest(final AtmosphereResource<HttpServletRequest, HttpServletResponse> event) throws IOException {
+    public void onRequest(final AtmosphereResource event) throws IOException {
 
         HttpServletRequest req = event.getRequest();
         HttpServletResponse res = event.getResponse();
@@ -77,7 +77,7 @@ public class LogViewerHandler extends TailerListenerAdapter implements Atmospher
 
     @Override
     public void onStateChange(
-            final AtmosphereResourceEvent<HttpServletRequest, HttpServletResponse> event) throws IOException {
+            final AtmosphereResourceEvent event) throws IOException {
 
         HttpServletResponse res = event.getResource().getResponse();
         if (event.isResuming()) {

@@ -9,8 +9,10 @@ repositories {
 
 dependencies {
 
-  compile 'org.atmosphere:atmosphere-runtime:0.7.1'
-  compile 'org.atmosphere:atmosphere-compat-tomcat:0.7.1'
+  compile 'org.atmosphere:atmosphere-runtime:1.0.0'
+  compile 'org.atmosphere:atmosphere-compat-jbossweb:1.0.0'
+  compile 'org.atmosphere:atmosphere-compat-tomcat:1.0.0'
+  compile 'org.atmosphere:atmosphere-compat-tomcat7:1.0.0'
   providedCompile 'javax.servlet:servlet-api:2.5'
   compile 'com.googlecode.json-simple:json-simple:1.1'
   compile 'org.slf4j:slf4j-api:1.6.1'
