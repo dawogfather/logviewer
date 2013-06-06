@@ -20,7 +20,7 @@ import java.util.List;
  */
 public class LogViewerHandler extends TailerListenerAdapter implements AtmosphereHandler<HttpServletRequest, HttpServletResponse> {
 
-    private final static String FILE_TO_WATCH = "/var/log/";
+    private final static String FILE_TO_WATCH = "/opt/tomcat/current-version/logs/";
     //private final static String FILE_TO_WATCH = "d://temp";
     private static Tailer tailer;
     private Broadcaster GLOBAL_BROADCASTER = null;
@@ -34,7 +34,7 @@ public class LogViewerHandler extends TailerListenerAdapter implements Atmospher
         if (logsDir.exists() && logsDir.isDirectory()) {
             File[] logs = logsDir.listFiles();
             for (File f : logs) {
-                if (f.getName().endsWith(".log")) {
+                if (f.getName().endsWith(".log")||(f.getName().endsWith(".out"))) {
                     watchableLogs.add(f.getName());
                 }
             }
