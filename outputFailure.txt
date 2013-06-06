@@ -1,0 +1,21 @@
+TOMCAT 7 STARTUP FAILS...
+
+INFO: Deploying web application archive /opt/tomcat/apache-tomcat-7.0.29/webapps/logviewer.war
+89 [localhost-startStop-1] INFO org.atmosphere.cpr.AtmosphereFramework - Installed AtmosphereHandler com.aestas.utils.logviewer.LogViewerHandler@301a3db mapped to context-path: /logviewer
+106 [localhost-startStop-1] INFO org.atmosphere.cpr.AtmosphereFramework - Auto detecting WebSocketHandler in /WEB-INF/classes/
+119 [localhost-startStop-1] INFO org.atmosphere.cpr.AtmosphereFramework - Atmosphere is using async support: org.atmosphere.container.Tomcat7AsyncSupportWithWebSocket running under container: Apache Tomcat/7.0.29
+120 [localhost-startStop-1] INFO org.atmosphere.cpr.AtmosphereFramework - Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol
+135 [localhost-startStop-1] INFO org.atmosphere.cpr.AtmosphereFramework - Installed Default AtmosphereInterceptor [Android Interceptor Support, SSE Interceptor Support, JSONP Interceptor Support]. Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults in your xml to disable them.
+135 [localhost-startStop-1] WARN org.atmosphere.cpr.AtmosphereFramework - No BroadcasterCache configured. Broadcasted message between client reconnection will be LOST. It is recommended to configure the HeaderBroadcasterCache.
+136 [localhost-startStop-1] WARN org.atmosphere.cpr.AtmosphereFramework - Neither TrackMessageSizeInterceptor or TrackMessageSizeFilter are installed. atmosphere.js may receive glued and incomplete message.
+136 [localhost-startStop-1] INFO org.atmosphere.cpr.AtmosphereFramework - HttpSession supported: true
+136 [localhost-startStop-1] INFO org.atmosphere.cpr.AtmosphereFramework - Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
+137 [localhost-startStop-1] INFO org.atmosphere.cpr.AtmosphereFramework - Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
+137 [localhost-startStop-1] INFO org.atmosphere.cpr.AtmosphereFramework - Using Broadcaster: org.atmosphere.cpr.DefaultBroadcaster
+140 [localhost-startStop-1] INFO org.atmosphere.cpr.AtmosphereFramework - Atmosphere Framework 1.0.0 started.
+
+WARN org.atmosphere.cpr.AtmosphereFramework - Failed using comet support: org.atmosphere.container.Tomcat7AsyncSupportWithWebSocket, error: Tomcat failed to detect this is a Comet application because context.xml is missing or the Http11NioProtocol Connector is not enabled.
+If that's not the case, you can also remove META-INF/context.xml and WEB-INF/lib/atmosphere-compat-tomcat.jar Is the Nio or Apr Connector enabled?
+118175 [http-bio-8080-exec-9] WARN org.atmosphere.cpr.AtmosphereFramework - Using org.atmosphere.container.Tomcat7BIOSupportWithWebSocket
+
+
