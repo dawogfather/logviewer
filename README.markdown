@@ -1,11 +1,13 @@
 logviewer
 =========
 
+A fork of aestasit log viewer that hopes to work with tomcat 7...
+
 An 'Atmosphere' based log viewer for simulating a Unix tail command in a browser.
 
 Sometime ago I have asked a [question](http://stackoverflow.com/questions/5803776/java-web-application-that-can-stream-the-content-of-an-arbitrary-file-to-the-brow) on Stackoverflow about the existence of a web application that could be used to tail on an arbitrary log file located on the server.
 
-I wanted the application to be deployable on any recent Java application server (Tomcat 6, Jetty, Weblogic 10.x) and also to have some kind of server push (Websocket, Comet) to avoid having to refresh the page.
+I wanted the application to be deployable on any recent Java application server (Tomcat 7.0.30+, Tomcat 6, Jetty, Weblogic 10.x) and also to have some kind of server push (Websocket, Comet) to avoid having to refresh the page.
 
 At the time of writing only one person replied and he told me to write the application myself. I cracked some code in a couple of hours and this is the result.
 
@@ -15,7 +17,7 @@ Nevertheless the application works in Tomcat 6.x and Jetty 6.1 (with some gotcha
 
 ## Build
 
-To build the application, please install [Gradle](http://www.gradle.org/), the Groovy based build tool.
+To build the application, please install [Gradle] 1.6 (http://www.gradle.org/), the Groovy based build tool or use the awesome [GVM] (http://www.gvmtool.net) install tool.
 
 Once installed, type :
 
@@ -23,10 +25,17 @@ Once installed, type :
 
 to generate the deployable artifact.
 
+## Jetty Running
+
+`gradle jettyRun`
+
 ## What works and what doesn't (compatibility matrix)
 
+### Tomcat 7.0.X
+Plan is for this to work also but as yet NOPE! ...
+
 ### Tomcat 6.0.X
-Works, but only with Firefox 3 and 4. Chrome doesn't seem to work. Other browsers not tested.
+Plan is for this to work also but as yet No idea...
 
 ### Jetty 6.1.x
 Works with Chrome and Firefox 4. Other browsers not tested.
@@ -36,8 +45,6 @@ Doesn't even deploy. :(
 
 Enjoy. Fork, critique, comment, whatever.
 
-2011 - Aestas
+2013 - atebyte apps
 
-[http://www.aestasit.com](http://www.aestasit.com)
-
-[http://blog.aestasit.com](http://blog.aestasit.com)
+[http://www.atebyteapps.com](http://www.atebyteapps.com)
